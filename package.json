@@ -1,0 +1,30 @@
+{
+  "name": "vuex-browser-sync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "rimraf ./dist && rollup -c ./rollup.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ua-parser-js": "0.7.20",
+    "viewport-dimensions": "0.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "7.6.0",
+    "jest": "24.9.0",
+    "pretty-format": "24.9.0",
+    "rimraf": "3.0.0",
+    "rollup": "1.21.3",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-babel-minify": "9.0.0",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "vue": "2.6.10",
+    "vuex": "3.1.1"
+  }
+}
