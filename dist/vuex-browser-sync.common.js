@@ -1,15 +1,15 @@
 /*!
- * vue-browser-sync v1.0.0
+ * vue-browser-sync v0.9.0
  * https://github.com/peter-moon/vuex-browser-sync
  * @license MIT
- */(function(a,b){"object"==typeof exports&&"undefined"!=typeof module?b(exports):"function"==typeof define&&define.amd?define(["exports"],b):(a=a||self,b(a.VuexUaSync={}))})(this,function(a){'use strict';function b(a,b,c){return b in a?Object.defineProperty(a,b,{value:c,enumerable:!0,configurable:!0,writable:!0}):a[b]=c,a}function c(a,b){var c=Object.keys(a);if(Object.getOwnPropertySymbols){var d=Object.getOwnPropertySymbols(a);b&&(d=d.filter(function(b){return Object.getOwnPropertyDescriptor(a,b).enumerable})),c.push.apply(c,d)}return c}function d(a){for(var d,e=1;e<arguments.length;e++)d=null==arguments[e]?{}:arguments[e],e%2?c(d,!0).forEach(function(c){b(a,c,d[c])}):Object.getOwnPropertyDescriptors?Object.defineProperties(a,Object.getOwnPropertyDescriptors(d)):c(d).forEach(function(b){Object.defineProperty(a,b,Object.getOwnPropertyDescriptor(d,b))});return a}var e="undefined"==typeof globalThis?"undefined"==typeof window?"undefined"==typeof global?"undefined"==typeof self?{}:self:global:window:globalThis,f=function(a,b){return b={exports:{}},a(b,b.exports),b.exports}(function(a,b){/*!
-   * UAParser.js v0.7.20
-   * Lightweight JavaScript-based User-Agent string parser
-   * https://github.com/faisalman/ua-parser-js
-   *
-   * Copyright © 2012-2019 Faisal Salman <f@faisalman.com>
-   * Licensed under MIT License
-   */(function(c,d){//////////////
+ */'use strict';Object.defineProperty(exports,"__esModule",{value:!0});function _defineProperty(a,b,c){return b in a?Object.defineProperty(a,b,{value:c,enumerable:!0,configurable:!0,writable:!0}):a[b]=c,a}function ownKeys(a,b){var c=Object.keys(a);if(Object.getOwnPropertySymbols){var d=Object.getOwnPropertySymbols(a);b&&(d=d.filter(function(b){return Object.getOwnPropertyDescriptor(a,b).enumerable})),c.push.apply(c,d)}return c}function _objectSpread2(a){for(var b,c=1;c<arguments.length;c++)b=null==arguments[c]?{}:arguments[c],c%2?ownKeys(b,!0).forEach(function(c){_defineProperty(a,c,b[c])}):Object.getOwnPropertyDescriptors?Object.defineProperties(a,Object.getOwnPropertyDescriptors(b)):ownKeys(b).forEach(function(c){Object.defineProperty(a,c,Object.getOwnPropertyDescriptor(b,c))});return a}var commonjsGlobal="undefined"==typeof globalThis?"undefined"==typeof window?"undefined"==typeof global?"undefined"==typeof self?{}:self:global:window:globalThis;function createCommonjsModule(a,b){return b={exports:{}},a(b,b.exports),b.exports}var uaParser=createCommonjsModule(function(a,b){/*!
+ * UAParser.js v0.7.20
+ * Lightweight JavaScript-based User-Agent string parser
+ * https://github.com/faisalman/ua-parser-js
+ *
+ * Copyright © 2012-2019 Faisal Salman <f@faisalman.com>
+ * Licensed under MIT License
+ */(function(c,d){//////////////
 // Constants
 /////////////
 var// deprecated
@@ -228,5 +228,5 @@ VERSION:"version"},i.CPU={ARCHITECTURE:"architecture"},i.DEVICE={MODEL:"model",V
 //   In AMD env the global scope should be kept clean, but jQuery is an exception.
 //   jQuery always exports to global scope, unless jQuery.noConflict(true) is used,
 //   and we should catch that.
-var j=c&&(c.jQuery||c.Zepto);if(typeof j!="undefined"&&!j.ua){var k=new i;j.ua=k.getResult(),j.ua.get=function(){return k.getUA()},j.ua.set=function(a){k.setUA(a);var b=k.getResult();for(var c in b)j.ua[c]=b[c]}}})("object"==typeof window?window:e)}),g=f.UAParser,h={},i=-1,j=-1;h.width=function(){return i},h.height=function(){return j},h.max=function(){return Math.max(i,j)},h.min=function(){return Math.min(i,j)},h.setDimensions=function(){"undefined"!=typeof document&&(i=document.documentElement.clientWidth,j=document.documentElement.clientHeight)},h.onWindowResize=function(){h.setDimensions()},"undefined"!=typeof window&&(window.addEventListener("resize",h.onWindowResize,!1),window.addEventListener("orientationchange",h.onWindowResize,!1),h.setDimensions());// Exports
-var k=h,l=function(a){return f(a)},m=function(){if("undefined"==typeof window||"undefined"==typeof document)return{viewport:{err:!0,message:"NEEDS window.document"}};var a=k.width(),b=k.height(),c=k.max(),d=k.min();return{viewport:{err:null,message:null,width:a,height:b,max:c,min:d}}};a.UA_SET="UA_SET",a.browserSync=function(a){var b=a.moduleName,c=void 0===b?"browser":b,e=a.ua,f=void 0===e?window.navigator.userAgent:e;return function(a){a.registerModule(c,{namespcaed:!0,state:Object.freeze(d({},l(f),{},m()))})}},Object.defineProperty(a,"__esModule",{value:!0})});
+var j=c&&(c.jQuery||c.Zepto);if(typeof j!="undefined"&&!j.ua){var k=new i;j.ua=k.getResult(),j.ua.get=function(){return k.getUA()},j.ua.set=function(a){k.setUA(a);var b=k.getResult();for(var c in b)j.ua[c]=b[c]}}})("object"==typeof window?window:commonjsGlobal)}),uaParser_1=uaParser.UAParser,viewport={},width=-1,height=-1;viewport.width=function(){return width},viewport.height=function(){return height},viewport.max=function(){return Math.max(width,height)},viewport.min=function(){return Math.min(width,height)},viewport.setDimensions=function(){"undefined"!=typeof document&&(width=document.documentElement.clientWidth,height=document.documentElement.clientHeight)},viewport.onWindowResize=function(){viewport.setDimensions()},"undefined"!=typeof window&&(window.addEventListener("resize",viewport.onWindowResize,!1),window.addEventListener("orientationchange",viewport.onWindowResize,!1),viewport.setDimensions());// Exports
+var viewportDimensions=viewport,UA_SET="UA_SET",parseUa=function(a){return uaParser(a)},parseViewport=function(){if("undefined"==typeof window||"undefined"==typeof document)return{viewport:{err:!0,message:"NEEDS window.document"}};var a=viewportDimensions.width(),b=viewportDimensions.height(),c=viewportDimensions.max(),d=viewportDimensions.min();return{viewport:{err:null,message:null,width:a,height:b,max:c,min:d}}},browserSync=function(a){var b=a.moduleName,c=void 0===b?"browser":b,d=a.ua,e=void 0===d?window.navigator.userAgent:d;return function(a){a.registerModule(c,{namespcaed:!0,state:Object.freeze(_objectSpread2({},parseUa(e),{},parseViewport()))})}};exports.UA_SET=UA_SET,exports.browserSync=browserSync;

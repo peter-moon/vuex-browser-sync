@@ -1,8 +1,11 @@
 {
   "name": "vuex-browser-sync",
-  "version": "1.0.0",
+  "version": "0.9.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/vuex-browser-sync.common.js",
+  "module": "dist/vuex-browser-sync.esm.js",
+  "unpkg": "dist/vuex-browser-sync.js",
+  "jsdelivr": "dist/vuex-browser-sync.js",
   "scripts": {
     "test": "jest",
     "build": "rimraf ./dist && rollup -c ./rollup.config.js"

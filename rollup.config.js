@@ -13,15 +13,15 @@ const banner = `/*!
 export default {
   input: './src/index.js',
   output: [{
-    file: './dist/vue-browser-sync.esm.js',
+    file: './dist/vuex-browser-sync.esm.js',
     format: 'es',
     banner
   }, {
-    file: './dist/vue-browser-sync.common.js',
+    file: './dist/vuex-browser-sync.common.js',
     format: 'cjs',
     banner
   }, {
-    file: './dist/vue-browser-sync.js',
+    file: './dist/vuex-browser-sync.js',
     format: 'umd',
     name: 'VuexUaSync',
     banner
