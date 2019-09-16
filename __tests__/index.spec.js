@@ -24,14 +24,13 @@ test('set parsed user agent data', () => {
     expect(cpu.architecture).toBe('amd64');
 });
 
-// TODO jest에서 왜 window가 잡히는 것인지 확인
 test('set parsed viewport data', () => {
-  console.log(typeof window);
-  console.log(typeof document);
-
   const { viewport } = store.state[MODULENAME_DEFAULT];
-
-  console.log(viewport);
-  // expect(viewport.err).toBe(true);
-  // expect(viewport.message).toBe('NEEDS window.document');
+  
+  expect(viewport.err).toBe(null);
+  expect(viewport.message).toBe(null);
+  expect(typeof viewport.width).toBe('number');
+  expect(typeof viewport.height).toBe('number');
+  expect(typeof viewport.max).toBe('number');
+  expect(typeof viewport.min).toBe('number');
 });
