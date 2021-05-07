@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ua-parser-js": "0.7.20",
+    "ua-parser-js": "0.7.24",
     "viewport-dimensions": "0.2.0"
   },
   "devDependencies": {
